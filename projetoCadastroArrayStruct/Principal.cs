@@ -12,6 +12,18 @@ namespace projetoCadastroArrayStruct
 {
     public partial class Principal : Form
     {
+        public struct Usua
+        {
+            public int codigo;
+            public string nome;
+            public string nivel;
+            public string login;
+            public string senha;
+        }
+
+        static public Usua[] usuarios = new Usua[10];
+        static public int contUsuario = 0;
+
         public Principal()
         {
             InitializeComponent();
