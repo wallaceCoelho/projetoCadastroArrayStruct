@@ -39,5 +39,11 @@ namespace projetoCadastroArrayStruct
             Usuarios formUsuario = new Usuarios();
             formUsuario.ShowDialog();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cliente formCliente = new Cliente();
+            formCliente.ShowDialog();
+        }
     }
 }
