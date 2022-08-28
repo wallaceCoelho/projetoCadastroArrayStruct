@@ -83,6 +83,7 @@ namespace projetoCadastroArrayStruct
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -97,19 +98,19 @@ namespace projetoCadastroArrayStruct
             // usuáriosToolStripMenuItem1
             // 
             this.usuáriosToolStripMenuItem1.Name = "usuáriosToolStripMenuItem1";
-            this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
             this.usuáriosToolStripMenuItem1.Text = "Usuários";
             // 
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             // 
             // produtosToolStripMenuItem1
             // 
             this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
             this.produtosToolStripMenuItem1.Text = "Produtos";
             // 
             // sairToolStripMenuItem

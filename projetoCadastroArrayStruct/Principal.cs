@@ -35,10 +35,24 @@ namespace projetoCadastroArrayStruct
             public int tel;
             public string email;
         }
+
+        public struct Prod
+        {
+            public int codigo;
+            public string desc;
+            public int unidade;
+            public int qtEstoque;
+            public float precoCusto;
+            public float precoVenda;
+        }
+
+        static public Prod[] produto = new Prod[10];
         static public Client[] clientes = new Client[10];
         static public Usua[] usuarios = new Usua[10];
         static public int contUsuario = 0;
         static public int contCliente = 0;
+        static public int contProduto = 0;
+
         public Principal()
         {
             InitializeComponent();
@@ -59,6 +73,12 @@ namespace projetoCadastroArrayStruct
         {
             Cliente formCliente = new Cliente();
             formCliente.ShowDialog();
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Produto formProduto = new Produto();
+            formProduto.ShowDialog();
         }
     }
 }

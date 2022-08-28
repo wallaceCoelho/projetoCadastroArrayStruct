@@ -152,40 +152,54 @@ namespace projetoCadastroArrayStruct
                 HabilitaEdicao();
                 tipoEdicao = true;
             }
-            else MessageBox.Show("Arquivo Cheio");
+            else MessageBox.Show("Arquivo cheio");
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (atualCliente > 0)
+            if (Principal.contCliente < 0)
             {
-                atualCliente--;
-                MostrarDadosCliente();
+                HabilitaEdicao();
+                tipoEdicao = false;
             }
-            else MessageBox.Show("Início do arquivo!");
+            else MessageBox.Show("Arquivo vazio");
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
+            if (atualCliente < Principal.contCliente - 1)
             {
-                if (atualCliente < Principal.contCliente - 1)
-                {
-                    atualCliente--;
-                    MostrarDadosCliente();
-                }
-                else MessageBox.Show("Fim de arquivo!");
+                atualCliente--;
+                MostrarDadosCliente();
             }
+            else MessageBox.Show("Fim de arquivo!");
         }
 
         private void btnProximo_Click(object sender, EventArgs e)
         {
+            if (atualCliente < Principal.contCliente - 1)
             {
-                if (atualCliente < Principal.contCliente - 1)
-                {
-                    atualCliente--;
-                    MostrarDadosCliente();
-                }
-                else MessageBox.Show("Fim de arquivo!");
+                atualCliente++;
+                MostrarDadosCliente();
+            }
+            else MessageBox.Show("Fim de arquivo!");
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (Principal.contCliente > 0)
+            {
+                Principal.clientes[atualCliente].nome = "";
+                Principal.clientes[atualCliente].cpf = int.Parse("");
+                Principal.clientes[atualCliente].rg = int.Parse("");
+                Principal.clientes[atualCliente].endereco = "";
+                Principal.clientes[atualCliente].bairro = "";
+                Principal.clientes[atualCliente].cidade = "";
+                Principal.clientes[atualCliente].uf = "";
+                Principal.clientes[atualCliente].cep = int.Parse("");
+                Principal.clientes[atualCliente].email = "";
+                Principal.clientes[atualCliente].tel = int.Parse("");
+                MostrarDadosCliente();
             }
         }
     }

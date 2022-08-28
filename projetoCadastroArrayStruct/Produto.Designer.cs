@@ -1,6 +1,6 @@
 ﻿namespace projetoCadastroArrayStruct
 {
-    partial class Cliente
+    partial class Produto
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
-            this.txtRg = new System.Windows.Forms.TextBox();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.txtUf = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtUnidade = new System.Windows.Forms.TextBox();
+            this.txtQtEstoque = new System.Windows.Forms.TextBox();
+            this.txtPrecoCusto = new System.Windows.Forms.TextBox();
+            this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
@@ -65,7 +55,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 27);
+            this.label1.Location = new System.Drawing.Point(52, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 0;
@@ -74,279 +65,199 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 64);
+            this.label2.Location = new System.Drawing.Point(52, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nome";
+            this.label2.Text = "Descrição";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 101);
+            this.label3.Location = new System.Drawing.Point(52, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "CPF";
+            this.label3.Text = "Unidade";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(376, 101);
+            this.label4.Location = new System.Drawing.Point(52, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 20);
+            this.label4.Size = new System.Drawing.Size(180, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "RG";
+            this.label4.Text = "Quantidade em estoque";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 138);
+            this.label5.Location = new System.Drawing.Point(52, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.Size = new System.Drawing.Size(115, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Endereço";
+            this.label5.Text = "Preço de custo";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 175);
+            this.label6.Location = new System.Drawing.Point(334, 226);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.Size = new System.Drawing.Size(119, 20);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Bairro";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(327, 175);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 20);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Cidade";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(548, 175);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 20);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "UF";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(49, 212);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 20);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "CEP";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(347, 212);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 20);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Telefone";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(49, 249);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 20);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "E-mail";
+            this.label6.Text = "Preço de venda";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(141, 24);
+            this.txtCodigo.Location = new System.Drawing.Point(144, 35);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(54, 26);
-            this.txtCodigo.TabIndex = 11;
+            this.txtCodigo.Size = new System.Drawing.Size(64, 26);
+            this.txtCodigo.TabIndex = 6;
             // 
-            // txtNome
+            // txtDesc
             // 
-            this.txtNome.Location = new System.Drawing.Point(141, 61);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(481, 26);
-            this.txtNome.TabIndex = 12;
+            this.txtDesc.Location = new System.Drawing.Point(144, 82);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(481, 26);
+            this.txtDesc.TabIndex = 6;
             // 
-            // txtCpf
+            // txtUnidade
             // 
-            this.txtCpf.Location = new System.Drawing.Point(141, 98);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(194, 26);
-            this.txtCpf.TabIndex = 13;
+            this.txtUnidade.Location = new System.Drawing.Point(144, 129);
+            this.txtUnidade.Name = "txtUnidade";
+            this.txtUnidade.Size = new System.Drawing.Size(92, 26);
+            this.txtUnidade.TabIndex = 6;
             // 
-            // txtRg
+            // txtQtEstoque
             // 
-            this.txtRg.Location = new System.Drawing.Point(416, 98);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(206, 26);
-            this.txtRg.TabIndex = 14;
+            this.txtQtEstoque.Location = new System.Drawing.Point(247, 176);
+            this.txtQtEstoque.Name = "txtQtEstoque";
+            this.txtQtEstoque.Size = new System.Drawing.Size(89, 26);
+            this.txtQtEstoque.TabIndex = 6;
             // 
-            // txtEndereco
+            // txtPrecoCusto
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(141, 135);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(481, 26);
-            this.txtEndereco.TabIndex = 15;
+            this.txtPrecoCusto.Location = new System.Drawing.Point(173, 223);
+            this.txtPrecoCusto.Name = "txtPrecoCusto";
+            this.txtPrecoCusto.Size = new System.Drawing.Size(154, 26);
+            this.txtPrecoCusto.TabIndex = 6;
             // 
-            // txtBairro
+            // txtPrecoVenda
             // 
-            this.txtBairro.Location = new System.Drawing.Point(141, 172);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(168, 26);
-            this.txtBairro.TabIndex = 16;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Location = new System.Drawing.Point(392, 172);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(146, 26);
-            this.txtCidade.TabIndex = 17;
-            // 
-            // txtUf
-            // 
-            this.txtUf.Location = new System.Drawing.Point(582, 172);
-            this.txtUf.Name = "txtUf";
-            this.txtUf.Size = new System.Drawing.Size(40, 26);
-            this.txtUf.TabIndex = 18;
-            // 
-            // txtCep
-            // 
-            this.txtCep.Location = new System.Drawing.Point(141, 209);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(178, 26);
-            this.txtCep.TabIndex = 19;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(424, 209);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(198, 26);
-            this.txtTelefone.TabIndex = 20;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(141, 246);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(481, 26);
-            this.txtEmail.TabIndex = 21;
+            this.txtPrecoVenda.Location = new System.Drawing.Point(459, 223);
+            this.txtPrecoVenda.Name = "txtPrecoVenda";
+            this.txtPrecoVenda.Size = new System.Drawing.Size(166, 26);
+            this.txtPrecoVenda.TabIndex = 6;
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(525, 378);
+            this.btnSair.Location = new System.Drawing.Point(528, 369);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(97, 38);
-            this.btnSair.TabIndex = 22;
+            this.btnSair.TabIndex = 32;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(525, 320);
+            this.btnExcluir.Location = new System.Drawing.Point(528, 311);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(97, 38);
-            this.btnExcluir.TabIndex = 23;
+            this.btnExcluir.TabIndex = 33;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(407, 378);
+            this.btnImprimir.Location = new System.Drawing.Point(410, 369);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(97, 38);
-            this.btnImprimir.TabIndex = 24;
+            this.btnImprimir.TabIndex = 34;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(407, 320);
+            this.btnAlterar.Location = new System.Drawing.Point(410, 311);
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(97, 38);
-            this.btnAlterar.TabIndex = 25;
+            this.btnAlterar.TabIndex = 35;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(289, 378);
+            this.btnPesquisar.Location = new System.Drawing.Point(292, 369);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(97, 38);
-            this.btnPesquisar.TabIndex = 26;
+            this.btnPesquisar.TabIndex = 36;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(171, 378);
+            this.btnCancelar.Location = new System.Drawing.Point(174, 369);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(97, 38);
-            this.btnCancelar.TabIndex = 27;
+            this.btnCancelar.TabIndex = 37;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(289, 320);
+            this.btnNovo.Location = new System.Drawing.Point(292, 311);
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(97, 38);
-            this.btnNovo.TabIndex = 28;
+            this.btnNovo.TabIndex = 38;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(53, 378);
+            this.btnSalvar.Location = new System.Drawing.Point(56, 369);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(97, 38);
-            this.btnSalvar.TabIndex = 29;
+            this.btnSalvar.TabIndex = 39;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnProximo
             // 
-            this.btnProximo.Location = new System.Drawing.Point(171, 320);
+            this.btnProximo.Location = new System.Drawing.Point(174, 311);
             this.btnProximo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProximo.Name = "btnProximo";
             this.btnProximo.Size = new System.Drawing.Size(97, 38);
-            this.btnProximo.TabIndex = 30;
+            this.btnProximo.TabIndex = 40;
             this.btnProximo.Text = "Próximo";
             this.btnProximo.UseVisualStyleBackColor = true;
             this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(53, 320);
+            this.btnAnterior.Location = new System.Drawing.Point(56, 311);
             this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(97, 38);
-            this.btnAnterior.TabIndex = 31;
+            this.btnAnterior.TabIndex = 41;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
-            // Cliente
+            // Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -362,22 +273,12 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnProximo);
             this.Controls.Add(this.btnAnterior);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.txtCep);
-            this.Controls.Add(this.txtUf);
-            this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.txtBairro);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtRg);
-            this.Controls.Add(this.txtCpf);
-            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtPrecoVenda);
+            this.Controls.Add(this.txtPrecoCusto);
+            this.Controls.Add(this.txtQtEstoque);
+            this.Controls.Add(this.txtUnidade);
+            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -386,10 +287,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Cliente";
+            this.Name = "Produto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Clientes";
-            this.Load += new System.EventHandler(this.Cliente_Load);
+            this.Text = "Cadastro de Produtos";
+            this.Load += new System.EventHandler(this.Produto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,22 +304,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.TextBox txtRg;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.TextBox txtUf;
-        private System.Windows.Forms.TextBox txtCep;
-        private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.TextBox txtUnidade;
+        private System.Windows.Forms.TextBox txtQtEstoque;
+        private System.Windows.Forms.TextBox txtPrecoCusto;
+        private System.Windows.Forms.TextBox txtPrecoVenda;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnImprimir;
