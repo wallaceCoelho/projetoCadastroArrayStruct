@@ -12,9 +12,27 @@ namespace projetoCadastroArrayStruct
 {
     public partial class Cliente : Form
     {
+        bool tipoEdicao = false;
+        int atualCliente = 0;
         public Cliente()
         {
             InitializeComponent();
+        }
+
+        private void MostrarDadosCliente()
+        {
+            txtCodigo.Text = Principal.clientes[atualCliente].codigo.ToString();
+            txtNome.Text = Principal.clientes[atualCliente].nome;
+            txtCpf.Text = Principal.clientes[atualCliente].cpf.ToString();
+            txtRg.Text = Principal.clientes[atualCliente].rg.ToString();
+            txtEndereco.Text = Principal.clientes[atualCliente].endereco;
+            txtBairro.Text = Principal.clientes[atualCliente].bairro;
+            txtCidade.Text = Principal.clientes[atualCliente].cidade;
+            txtUf.Text = Principal.clientes[atualCliente].uf;
+            txtCep.Text = Principal.clientes[atualCliente].cep.ToString();
+            txtEmail.Text = Principal.clientes[atualCliente].email;
+            txtTelefone.Text = Principal.clientes[atualCliente].tel.ToString();
+
         }
         private void DesabilitaEdicao()
         {
@@ -80,21 +98,95 @@ namespace projetoCadastroArrayStruct
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DesabilitaEdicao();
+            MostrarDadosCliente();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (tipoEdicao)
+            {
+                Principal.clientes[Principal.contCliente].codigo = int.Parse(txtCodigo.Text);
+                Principal.clientes[Principal.contCliente].nome = txtNome.Text;
+                Principal.clientes[Principal.contCliente].cpf = int.Parse(txtCpf.Text);
+                Principal.clientes[Principal.contCliente].rg = int.Parse(txtRg.Text);
+                Principal.clientes[Principal.contCliente].endereco = txtEndereco.Text;
+                Principal.clientes[Principal.contCliente].bairro = txtBairro.Text;
+                Principal.clientes[Principal.contCliente].cidade = txtCidade.Text;
+                Principal.clientes[Principal.contCliente].uf = txtUf.Text;
+                Principal.clientes[Principal.contCliente].cep = int.Parse(txtCep.Text);
+                Principal.clientes[Principal.contCliente].email = txtEmail.Text;
+                Principal.clientes[Principal.contCliente].tel = int.Parse(txtTelefone.Text);
+                atualCliente = Principal.contCliente++;
+            }
+            else
+            {
+                Principal.clientes[atualCliente].nome = txtNome.Text;
+                Principal.clientes[atualCliente].cpf = int.Parse(txtCpf.Text);
+                Principal.clientes[atualCliente].rg = int.Parse(txtRg.Text);
+                Principal.clientes[atualCliente].endereco = txtEndereco.Text;
+                Principal.clientes[atualCliente].bairro = txtBairro.Text;
+                Principal.clientes[atualCliente].cidade = txtCidade.Text;
+                Principal.clientes[atualCliente].uf = txtUf.Text;
+                Principal.clientes[atualCliente].cep = int.Parse(txtCep.Text);
+                Principal.clientes[atualCliente].email = txtEmail.Text;
+                Principal.clientes[atualCliente].tel = int.Parse(txtTelefone.Text);
+            }
             DesabilitaEdicao();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            HabilitaEdicao();
+            if (Principal.contCliente < 10)
+            {
+                txtCodigo.Text = (Principal.contCliente + 1).ToString();
+                txtNome.Text = "";
+                txtCpf.Text = "";
+                txtRg.Text = "";
+                txtEndereco.Text = "";
+                txtBairro.Text = "";
+                txtCidade.Text = "";
+                txtUf.Text = "";
+                txtCep.Text = "";
+                txtEmail.Text = "";
+                txtTelefone.Text = "";
+                HabilitaEdicao();
+                tipoEdicao = true;
+            }
+            else MessageBox.Show("Arquivo Cheio");
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            HabilitaEdicao();
+            if (atualCliente > 0)
+            {
+                atualCliente--;
+                MostrarDadosCliente();
+            }
+            else MessageBox.Show("Início do arquivo!");
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            {
+                if (atualCliente < Principal.contCliente - 1)
+                {
+                    atualCliente--;
+                    MostrarDadosCliente();
+                }
+                else MessageBox.Show("Fim de arquivo!");
+            }
+        }
+
+        private void btnProximo_Click(object sender, EventArgs e)
+        {
+            {
+                if (atualCliente < Principal.contCliente - 1)
+                {
+                    atualCliente--;
+                    MostrarDadosCliente();
+                }
+                else MessageBox.Show("Fim de arquivo!");
+            }
         }
     }
 }

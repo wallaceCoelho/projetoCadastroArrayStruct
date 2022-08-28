@@ -21,9 +21,24 @@ namespace projetoCadastroArrayStruct
             public string senha;
         }
 
+        public struct Client
+        {
+            public int codigo;
+            public string nome;
+            public int cpf;
+            public int rg;
+            public string endereco;
+            public string bairro;
+            public string cidade;
+            public string uf;
+            public int cep;
+            public int tel;
+            public string email;
+        }
+        static public Client[] clientes = new Client[10];
         static public Usua[] usuarios = new Usua[10];
         static public int contUsuario = 0;
-
+        static public int contCliente = 0;
         public Principal()
         {
             InitializeComponent();

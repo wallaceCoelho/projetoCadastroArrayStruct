@@ -15,7 +15,7 @@ namespace projetoCadastroArrayStruct
         bool tipoEdicao = false;
         int atual = 0;
 
-        private void MostrarDados()
+        private void MostrarDadosUsuario()
         {
             txtCodigo.Text = Principal.usuarios[atual].codigo.ToString();
             txtNome.Text = Principal.usuarios[atual].nome;
@@ -100,7 +100,7 @@ namespace projetoCadastroArrayStruct
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DesabilitaEdicao();
-            MostrarDados();
+            MostrarDadosUsuario();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace projetoCadastroArrayStruct
             if (atual > 0)
             {
                 atual--;
-                MostrarDados();
+                MostrarDadosUsuario();
             }
             else MessageBox.Show("Início do arquivo!");
         }
@@ -144,7 +144,7 @@ namespace projetoCadastroArrayStruct
                 if (atual < Principal.contUsuario - 1)
                 {
                     atual++;
-                    MostrarDados();
+                    MostrarDadosUsuario();
                 }
                 else MessageBox.Show("Fim de arquivo!");
             }
@@ -158,7 +158,7 @@ namespace projetoCadastroArrayStruct
                 Principal.usuarios[atual].nivel = "";
                 Principal.usuarios[atual].login = "";
                 Principal.usuarios[atual].senha = "";
-                MostrarDados();
+                MostrarDadosUsuario();
             }
         }
     }

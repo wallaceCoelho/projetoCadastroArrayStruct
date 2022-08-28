@@ -146,7 +146,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(315, 212);
+            this.label10.Location = new System.Drawing.Point(347, 212);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 20);
             this.label10.TabIndex = 9;
@@ -172,7 +172,7 @@
             // 
             this.txtNome.Location = new System.Drawing.Point(141, 61);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(196, 26);
+            this.txtNome.Size = new System.Drawing.Size(481, 26);
             this.txtNome.TabIndex = 12;
             // 
             // txtCpf
@@ -221,21 +221,21 @@
             // 
             this.txtCep.Location = new System.Drawing.Point(141, 209);
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(145, 26);
+            this.txtCep.Size = new System.Drawing.Size(178, 26);
             this.txtCep.TabIndex = 19;
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(392, 209);
+            this.txtTelefone.Location = new System.Drawing.Point(424, 209);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(182, 26);
+            this.txtTelefone.Size = new System.Drawing.Size(198, 26);
             this.txtTelefone.TabIndex = 20;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(141, 246);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(299, 26);
+            this.txtEmail.Size = new System.Drawing.Size(481, 26);
             this.txtEmail.TabIndex = 21;
             // 
             // btnSair
@@ -332,6 +332,7 @@
             this.btnProximo.TabIndex = 30;
             this.btnProximo.Text = "Próximo";
             this.btnProximo.UseVisualStyleBackColor = true;
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnAnterior
             // 
@@ -342,6 +343,7 @@
             this.btnAnterior.TabIndex = 31;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // Cliente
             // 
