@@ -161,5 +161,32 @@ namespace projetoCadastroArrayStruct
                 MostrarDadosUsuario();
             }
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pnlPesquisa.Visible = true;
+            txtPesquisa.Text = "";
+
+        }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            int i;
+
+            for (i = 0; i < Principal.contUsuario; i++)
+            {
+                if (Principal.usuarios[i].nome.IndexOf(txtPesquisa.Text) >= 0)
+                {
+                    atual = i;
+                    MostrarDadosUsuario();
+                    break;
+                }
+            } 
+            if (i >= Principal.contUsuario)
+            {
+                MessageBox.Show("Cadastro não encontrado ou não existente");
+            }
+            pnlPesquisa.Visible = false;
+        }
     }
 }

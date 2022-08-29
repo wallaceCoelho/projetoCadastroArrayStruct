@@ -49,6 +49,11 @@ namespace projetoCadastroArrayStruct
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.pnlPesquisa = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.pnlPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -223,6 +228,7 @@ namespace projetoCadastroArrayStruct
             this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnImprimir
             // 
@@ -245,12 +251,52 @@ namespace projetoCadastroArrayStruct
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // pnlPesquisa
+            // 
+            this.pnlPesquisa.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlPesquisa.Controls.Add(this.btnPesquisa);
+            this.pnlPesquisa.Controls.Add(this.txtPesquisa);
+            this.pnlPesquisa.Controls.Add(this.label6);
+            this.pnlPesquisa.Location = new System.Drawing.Point(293, 146);
+            this.pnlPesquisa.Name = "pnlPesquisa";
+            this.pnlPesquisa.Size = new System.Drawing.Size(333, 64);
+            this.pnlPesquisa.TabIndex = 3;
+            this.pnlPesquisa.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Nome";
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Location = new System.Drawing.Point(59, 18);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(167, 26);
+            this.txtPesquisa.TabIndex = 1;
+            // 
+            // btnPesquisa
+            // 
+            this.btnPesquisa.AutoSize = true;
+            this.btnPesquisa.Location = new System.Drawing.Point(232, 16);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(91, 30);
+            this.btnPesquisa.TabIndex = 2;
+            this.btnPesquisa.Text = "Pesquisar";
+            this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlPesquisa);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnImprimir);
@@ -277,6 +323,8 @@ namespace projetoCadastroArrayStruct
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Usuários";
             this.Load += new System.EventHandler(this.Usuarios_Load);
+            this.pnlPesquisa.ResumeLayout(false);
+            this.pnlPesquisa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +352,9 @@ namespace projetoCadastroArrayStruct
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Panel pnlPesquisa;
+        private System.Windows.Forms.Button btnPesquisa;
+        private System.Windows.Forms.TextBox txtPesquisa;
+        private System.Windows.Forms.Label label6;
     }
 }
