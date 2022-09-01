@@ -202,5 +202,60 @@ namespace projetoCadastroArrayStruct
                 MostrarDadosCliente();
             }
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pnlPesquisa.Visible = true;
+            txtPesquisa.Text = "";
+        }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            int i;
+
+            for (i = 0; i < Principal.contCliente; i++)
+            {
+                if (Principal.clientes[i].nome.IndexOf(txtPesquisa.Text) >= 0)
+                {
+                    atualCliente = i;
+                    MostrarDadosCliente();
+                    break;
+                }
+            }
+            if (i >= Principal.contCliente)
+            {
+                MessageBox.Show("Cadastro não encontrado ou não existente");
+            }
+            pnlPesquisa.Visible = false;
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA DE CLIENTES" + (char)10 + (char)10;
+            objImpressao.DrawString(strDados, new Font("Arial", 20, FontStyle.Bold), Brushes.Red, 300, 50);
+
+            strDados = "Código: " + txtCodigo.Text + (char)10;
+            strDados += "Nome: " + txtNome.Text + (char)10;
+            strDados += "CPF: " + txtCpf.Text + (char)10;
+            strDados += "RG: " + txtRg.Text + (char)10;
+            strDados += "Endereço: " + txtEndereco.Text + (char)10;
+            strDados += "Bairro: " + txtBairro.Text + (char)10;
+            strDados += "Cidade: " + txtCidade.Text + (char)10;
+            strDados += "UF: " + txtUf.Text + (char)10;
+            strDados += "CEP: " + txtCep.Text + (char)10;
+            strDados += "Telefone: " + txtTelefone.Text + (char)10;
+            strDados += "E-mail: " + txtEmail.Text;
+
+            objImpressao.DrawString(strDados, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, 50, 120);
+            objImpressao.DrawLine(new Pen(Brushes.Black), 50, 80, 800, 80);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }

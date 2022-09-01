@@ -165,5 +165,55 @@ namespace projetoCadastroArrayStruct
                 MostrarDadosProduto();
             }
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            pnlPesquisa.Visible = true;
+            txtPesquisa.Text = "";
+        }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            int i;
+
+            for (i = 0; i < Principal.contProduto; i++)
+            {
+                if (Principal.produto[i].desc.IndexOf(txtPesquisa.Text) >= 0)
+                {
+                    atualProduto = i;
+                    MostrarDadosProduto();
+                    break;
+                }
+            }
+            if (i >= Principal.contProduto)
+            {
+                MessageBox.Show("Cadastro não encontrado ou não existente");
+            }
+            pnlPesquisa.Visible = false;
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA DE CLIENTES" + (char)10 + (char)10;
+            objImpressao.DrawString(strDados, new Font("Arial", 20, FontStyle.Bold), Brushes.Red, 300, 50);
+
+            strDados = "Código: " + txtCodigo.Text + (char)10;
+            strDados += "Descrição: " + txtDesc.Text + (char)10;
+            strDados += "Unidade: " + txtUnidade.Text + (char)10;
+            strDados += "Quantidade em estoque: " + txtQtEstoque.Text + (char)10;
+            strDados += "Preço de custo: " + txtPrecoCusto.Text + (char)10;
+            strDados += "Preço de venda: " + txtPrecoVenda.Text;
+
+            objImpressao.DrawString(strDados, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, 50, 120);
+            objImpressao.DrawLine(new Pen(Brushes.Black), 50, 80, 800, 80);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }

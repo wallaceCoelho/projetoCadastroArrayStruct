@@ -188,5 +188,27 @@ namespace projetoCadastroArrayStruct
             }
             pnlPesquisa.Visible = false;
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strDados;
+            Graphics objImpressao = e.Graphics;
+
+            strDados = "FICHA DE USUÁRIO" +(char)10 + (char)10;
+            objImpressao.DrawString(strDados, new Font("Arial", 20, FontStyle.Bold), Brushes.Red, 300, 50);
+
+            strDados = "Código: " + txtCodigo.Text + (char)10;
+            strDados += "Nome: " + txtNome.Text + (char)10;
+            strDados += "Nível: " + txtNivel.Text + (char)10;
+            strDados += "Login: " + txtLogin.Text;
+
+            objImpressao.DrawString(strDados, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, 50, 120);
+            objImpressao.DrawLine(new Pen(Brushes.Black), 50, 80, 800, 80);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace projetoCadastroArrayStruct
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtNivel = new System.Windows.Forms.TextBox();
@@ -50,9 +51,11 @@ namespace projetoCadastroArrayStruct
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pnlPesquisa = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.pnlPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +99,7 @@ namespace projetoCadastroArrayStruct
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(127, 26);
             this.txtSenha.TabIndex = 0;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -239,6 +243,7 @@ namespace projetoCadastroArrayStruct
             this.btnImprimir.TabIndex = 2;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnSair
             // 
@@ -263,22 +268,6 @@ namespace projetoCadastroArrayStruct
             this.pnlPesquisa.TabIndex = 3;
             this.pnlPesquisa.Visible = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Nome";
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Location = new System.Drawing.Point(59, 18);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(167, 26);
-            this.txtPesquisa.TabIndex = 1;
-            // 
             // btnPesquisa
             // 
             this.btnPesquisa.AutoSize = true;
@@ -289,6 +278,37 @@ namespace projetoCadastroArrayStruct
             this.btnPesquisa.Text = "Pesquisar";
             this.btnPesquisa.UseVisualStyleBackColor = true;
             this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Location = new System.Drawing.Point(59, 18);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(167, 26);
+            this.txtPesquisa.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Nome";
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // Usuarios
             // 
@@ -356,5 +376,7 @@ namespace projetoCadastroArrayStruct
         private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
