@@ -273,7 +273,7 @@
             this.pnlPesquisa.Controls.Add(this.btnPesquisa);
             this.pnlPesquisa.Controls.Add(this.txtPesquisa);
             this.pnlPesquisa.Controls.Add(this.label12);
-            this.pnlPesquisa.Location = new System.Drawing.Point(174, 202);
+            this.pnlPesquisa.Location = new System.Drawing.Point(188, 268);
             this.pnlPesquisa.Name = "pnlPesquisa";
             this.pnlPesquisa.Size = new System.Drawing.Size(333, 64);
             this.pnlPesquisa.TabIndex = 42;

@@ -91,8 +91,8 @@ namespace projetoCadastroArrayStruct
                 Principal.produto[Principal.contProduto].desc = txtDesc.Text;
                 Principal.produto[Principal.contProduto].unidade = int.Parse(txtUnidade.Text);
                 Principal.produto[Principal.contProduto].qtEstoque = int.Parse(txtQtEstoque.Text);
-                Principal.produto[Principal.contProduto].precoCusto = int.Parse(txtPrecoCusto.Text);
-                Principal.produto[Principal.contProduto].precoVenda = int.Parse(txtPrecoVenda.Text);
+                Principal.produto[Principal.contProduto].precoCusto = float.Parse(txtPrecoCusto.Text);
+                Principal.produto[Principal.contProduto].precoVenda = float.Parse(txtPrecoVenda.Text);
                 atualProduto = Principal.contProduto++;
             }
             else
@@ -101,8 +101,8 @@ namespace projetoCadastroArrayStruct
                 Principal.produto[atualProduto].desc = txtDesc.Text;
                 Principal.produto[atualProduto].unidade = int.Parse(txtUnidade.Text);
                 Principal.produto[atualProduto].qtEstoque = int.Parse(txtQtEstoque.Text);
-                Principal.produto[atualProduto].precoCusto = int.Parse(txtPrecoCusto.Text);
-                Principal.produto[atualProduto].precoVenda = int.Parse(txtPrecoVenda.Text);
+                Principal.produto[atualProduto].precoCusto = float.Parse(txtPrecoCusto.Text);
+                Principal.produto[atualProduto].precoVenda = float.Parse(txtPrecoVenda.Text);
             }
             DesabilitaEdicao();
         }
@@ -125,7 +125,7 @@ namespace projetoCadastroArrayStruct
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (Principal.contProduto < 0)
+            if (Principal.contProduto > 0)
             {
                 HabilitaEdicao();
                 tipoEdicao = false;

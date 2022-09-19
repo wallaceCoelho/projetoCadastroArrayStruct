@@ -120,7 +120,7 @@ namespace projetoCadastroArrayStruct
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (Principal.contUsuario < 0)
+            if (Principal.contUsuario > 0)
             {
                 HabilitaEdicao();
                 tipoEdicao = false;

@@ -23,15 +23,15 @@ namespace projetoCadastroArrayStruct
         {
             txtCodigo.Text = Principal.clientes[atualCliente].codigo.ToString();
             txtNome.Text = Principal.clientes[atualCliente].nome;
-            txtCpf.Text = Principal.clientes[atualCliente].cpf.ToString();
-            txtRg.Text = Principal.clientes[atualCliente].rg.ToString();
+            txtCpf.Text = Principal.clientes[atualCliente].cpf;
+            txtRg.Text = Principal.clientes[atualCliente].rg;
             txtEndereco.Text = Principal.clientes[atualCliente].endereco;
             txtBairro.Text = Principal.clientes[atualCliente].bairro;
             txtCidade.Text = Principal.clientes[atualCliente].cidade;
             txtUf.Text = Principal.clientes[atualCliente].uf;
-            txtCep.Text = Principal.clientes[atualCliente].cep.ToString();
+            txtCep.Text = Principal.clientes[atualCliente].cep;
             txtEmail.Text = Principal.clientes[atualCliente].email;
-            txtTelefone.Text = Principal.clientes[atualCliente].tel.ToString();
+            txtTelefone.Text = Principal.clientes[atualCliente].tel;
 
         }
         private void DesabilitaEdicao()
@@ -107,29 +107,29 @@ namespace projetoCadastroArrayStruct
             {
                 Principal.clientes[Principal.contCliente].codigo = int.Parse(txtCodigo.Text);
                 Principal.clientes[Principal.contCliente].nome = txtNome.Text;
-                Principal.clientes[Principal.contCliente].cpf = int.Parse(txtCpf.Text);
-                Principal.clientes[Principal.contCliente].rg = int.Parse(txtRg.Text);
+                Principal.clientes[Principal.contCliente].cpf = txtCpf.Text;
+                Principal.clientes[Principal.contCliente].rg = txtRg.Text;
                 Principal.clientes[Principal.contCliente].endereco = txtEndereco.Text;
                 Principal.clientes[Principal.contCliente].bairro = txtBairro.Text;
                 Principal.clientes[Principal.contCliente].cidade = txtCidade.Text;
                 Principal.clientes[Principal.contCliente].uf = txtUf.Text;
-                Principal.clientes[Principal.contCliente].cep = int.Parse(txtCep.Text);
+                Principal.clientes[Principal.contCliente].cep = txtCep.Text;
                 Principal.clientes[Principal.contCliente].email = txtEmail.Text;
-                Principal.clientes[Principal.contCliente].tel = int.Parse(txtTelefone.Text);
+                Principal.clientes[Principal.contCliente].tel = txtTelefone.Text;
                 atualCliente = Principal.contCliente++;
             }
             else
             {
                 Principal.clientes[atualCliente].nome = txtNome.Text;
-                Principal.clientes[atualCliente].cpf = int.Parse(txtCpf.Text);
-                Principal.clientes[atualCliente].rg = int.Parse(txtRg.Text);
+                Principal.clientes[atualCliente].cpf = txtCpf.Text;
+                Principal.clientes[atualCliente].rg = txtRg.Text;
                 Principal.clientes[atualCliente].endereco = txtEndereco.Text;
                 Principal.clientes[atualCliente].bairro = txtBairro.Text;
                 Principal.clientes[atualCliente].cidade = txtCidade.Text;
                 Principal.clientes[atualCliente].uf = txtUf.Text;
-                Principal.clientes[atualCliente].cep = int.Parse(txtCep.Text);
+                Principal.clientes[atualCliente].cep = txtCep.Text;
                 Principal.clientes[atualCliente].email = txtEmail.Text;
-                Principal.clientes[atualCliente].tel = int.Parse(txtTelefone.Text);
+                Principal.clientes[atualCliente].tel = txtTelefone.Text;
             }
             DesabilitaEdicao();
         }
@@ -157,7 +157,7 @@ namespace projetoCadastroArrayStruct
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (Principal.contCliente < 0)
+            if (Principal.contCliente > 0)
             {
                 HabilitaEdicao();
                 tipoEdicao = false;
@@ -190,15 +190,15 @@ namespace projetoCadastroArrayStruct
             if (Principal.contCliente > 0)
             {
                 Principal.clientes[atualCliente].nome = "";
-                Principal.clientes[atualCliente].cpf = int.Parse("");
-                Principal.clientes[atualCliente].rg = int.Parse("");
+                Principal.clientes[atualCliente].cpf = "";
+                Principal.clientes[atualCliente].rg = "";
                 Principal.clientes[atualCliente].endereco = "";
                 Principal.clientes[atualCliente].bairro = "";
                 Principal.clientes[atualCliente].cidade = "";
                 Principal.clientes[atualCliente].uf = "";
-                Principal.clientes[atualCliente].cep = int.Parse("");
+                Principal.clientes[atualCliente].cep = "";
                 Principal.clientes[atualCliente].email = "";
-                Principal.clientes[atualCliente].tel = int.Parse("");
+                Principal.clientes[atualCliente].tel = "";
                 MostrarDadosCliente();
             }
         }
